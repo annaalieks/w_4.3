@@ -63,7 +63,7 @@ body {
     display: none;
 }
 
-span, h2, h3 {
+.uppercase {
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -72,8 +72,7 @@ span, h2, h3 {
     padding: 50px;
     }
 
-.heading--peple span,
-.heading--problem span {
+.blue-subtitle {
     color: #0536FC;
     opacity: 0.9;
 }
@@ -108,33 +107,21 @@ a {
     background-color: #0536FC;
 }
 
-.link:hover h3,
-.link:hover p {
+.link:hover .white-font {
     color: #FFFFFF;
 }
 
 h3 {
     color: #000000;
     margin: 0;
+    padding-top: 30px;
 }
 
-h3::before {
+.numbering {
     opacity: 0.7;
     font-weight: 300;
     display: block;
-    padding-bottom: 30px;
-}
-
-h3.before--number01::before {
-    content: "01";
-}
-
-h3.before--number02::before {
-    content: "02";
-}
-
-h3.before--number03::before {
-    content: "03";
+    color: #000000;
 }
 
 p {
@@ -252,7 +239,7 @@ section.problem {
         grid-template-rows: 520px 400px;
         grid-template-areas:    
             "motto motto heading-problem heading-problem"
-            "empty-block statistics-population statistics-education statistics-problem";
+            ". statistics-population statistics-education statistics-problem";
     }
 
     .heading--peple {
@@ -314,10 +301,6 @@ section.problem {
         grid-area: heading-problem; 
         padding-top: 150px;
         padding-left: 50px;
-    }
-
-    .empty {
-        grid-area: empty-block;
     }
 
     .statistics--population {
